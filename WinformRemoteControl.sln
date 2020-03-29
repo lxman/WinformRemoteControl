@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinformRemoteControl", "WinformRemoteControl\WinformRemoteControl.csproj", "{8DDDF6FC-D0D9-42C4-A03E-D883FD4142AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientDemo", "ClientDemo\ClientDemo.csproj", "{B511094A-D320-421F-93A7-3B6A0D5C5801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerDemo", "ServerDemo\ServerDemo.csproj", "{17393200-BCF0-4F27-983E-79B2A80D6925}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DDDF6FC-D0D9-42C4-A03E-D883FD4142AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDDF6FC-D0D9-42C4-A03E-D883FD4142AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDDF6FC-D0D9-42C4-A03E-D883FD4142AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDDF6FC-D0D9-42C4-A03E-D883FD4142AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B511094A-D320-421F-93A7-3B6A0D5C5801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B511094A-D320-421F-93A7-3B6A0D5C5801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B511094A-D320-421F-93A7-3B6A0D5C5801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B511094A-D320-421F-93A7-3B6A0D5C5801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17393200-BCF0-4F27-983E-79B2A80D6925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17393200-BCF0-4F27-983E-79B2A80D6925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17393200-BCF0-4F27-983E-79B2A80D6925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17393200-BCF0-4F27-983E-79B2A80D6925}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
