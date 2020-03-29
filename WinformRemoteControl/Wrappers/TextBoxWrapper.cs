@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace WinformRemoteControl.Wrappers
 {
-    public class TextBoxWrapper : IControlWrapper, IDisposable
+    internal class TextBoxWrapper : IControlWrapper, IDisposable
     {
         public Guid Identifier { get; } = Guid.NewGuid();
         

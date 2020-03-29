@@ -1,6 +1,6 @@
 ﻿namespace WinformRemoteControl
 {
-    public enum MessageType
+    internal enum MessageType
     {
         Server,
         Control,

@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace WinformRemoteControl.Wrappers
 {
-    public class TabControlWrapper : IControlWrapper, IDisposable
+    internal class TabControlWrapper : IControlWrapper, IDisposable
     {
         public Guid Identifier { get; } = Guid.NewGuid();
         

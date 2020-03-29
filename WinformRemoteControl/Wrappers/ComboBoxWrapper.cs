@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace WinformRemoteControl.Wrappers
 {
-    public class ComboBoxWrapper : IControlWrapper, IDisposable
+    internal class ComboBoxWrapper : IControlWrapper, IDisposable
     {
         public Guid Identifier { get; } = Guid.NewGuid();
         

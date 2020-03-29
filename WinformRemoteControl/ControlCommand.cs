@@ -1,6 +1,6 @@
 ﻿namespace WinformRemoteControl
 {
-    public enum ControlCommand
+    internal enum ControlCommand
     {
         ButtonClick,
         LabelSetText,

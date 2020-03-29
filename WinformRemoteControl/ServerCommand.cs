@@ -1,6 +1,6 @@
 ﻿namespace WinformRemoteControl
 {
-    public enum ServerCommand
+    internal enum ServerCommand
     {
         GetControls
     }

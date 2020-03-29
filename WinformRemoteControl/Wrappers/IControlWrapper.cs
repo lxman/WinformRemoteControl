@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace WinformRemoteControl.Wrappers
 {
-    public interface IControlWrapper
+    internal interface IControlWrapper
     {
         Guid Identifier { get; }
         
