@@ -26,6 +26,10 @@ namespace ServerDemo
             RemoteControlServer.AddControl(comboBox1);
             RemoteControlServer.AddControl(comboBox2);
             RemoteControlServer.AddControl(tabControl1);
+            RemoteControlServer.AddControl(radioButton1);
+            RemoteControlServer.AddControl(radioButton2);
+            RemoteControlServer.AddControl(radioButton3);
+            RemoteControlServer.AddControl(radioButton4);
         }
 
         private void button1_Click(object sender, EventArgs e)

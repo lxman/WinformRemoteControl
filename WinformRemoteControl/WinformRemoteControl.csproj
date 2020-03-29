@@ -60,6 +60,7 @@
         <Compile Include="Wrappers\ComboBoxWrapper.cs" />
         <Compile Include="Wrappers\IControlWrapper.cs" />
         <Compile Include="Wrappers\LabelWrapper.cs" />
+        <Compile Include="Wrappers\RadioButtonWrapper.cs" />
         <Compile Include="Wrappers\TabControlWrapper.cs" />
         <Compile Include="Wrappers\TextBoxWrapper.cs" />
     </ItemGroup>

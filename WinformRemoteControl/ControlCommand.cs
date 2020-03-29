@@ -7,6 +7,7 @@
         TextBoxSetText,
         ComboBoxGetElements,
         ComboBoxSetIndex,
-        TabControlSelectTab
+        TabControlSelectTab,
+        RadioButtonCheck
     }
 }

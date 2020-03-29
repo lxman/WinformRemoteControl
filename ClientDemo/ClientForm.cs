@@ -9,6 +9,7 @@ namespace ClientDemo
     public partial class ClientForm : Form
     {
         private readonly WinformRemoteControl.Client RemoteControlClient;
+        private bool IsComboSetup;
         
         public ClientForm()
         {
@@ -40,6 +41,8 @@ namespace ClientDemo
             textBox3.Enabled = RemoteControlClient.Connected;
             comboBox1.Enabled = RemoteControlClient.Connected;
             comboBox2.Enabled = RemoteControlClient.Connected;
+            comboBox3.Enabled = RemoteControlClient.Connected;
+            comboBox3.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,6 +98,12 @@ namespace ClientDemo
         private void button6_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBox3.Text)) RemoteControlClient.TabControlSelectTab("tabControl1", textBox3.Text);
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (IsComboSetup) RemoteControlClient.RadioButtonCheck($"radioButton{comboBox3.SelectedIndex + 1}");
+            else IsComboSetup = true;
         }
     }
 }

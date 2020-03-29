@@ -46,11 +46,16 @@ namespace WinformRemoteControl
             Send(FormComboBoxRequestElementsHeader(GetGuidFromName(name)));
         }
 
+        public void RadioButtonCheck(string name)
+        {
+            Send(FormRadioButtonCheckHeader(GetGuidFromName(name)));
+        }
+
         public void ComboBoxSetIndex(string name, int index)
         {
             Send(FormComboBoxSetIndexHeader(GetGuidFromName(name), index));
         }
-
+        
         public List<(int, string)> GetItemsForCombo(string name)
         {
             return ComboBoxElementLists.ContainsKey(GetGuidFromName(name)) ? ComboBoxElementLists[GetGuidFromName(name)] : new List<(int, string)>();
@@ -152,6 +157,11 @@ namespace WinformRemoteControl
         private static Dictionary<object, object> FormComboBoxRequestElementsHeader(Guid id)
         {
             return FormBaseControlCommandHeader(ControlCommand.ComboBoxGetElements, id);
+        }
+
+        private static Dictionary<object, object> FormRadioButtonCheckHeader(Guid id)
+        {
+            return FormBaseControlCommandHeader(ControlCommand.RadioButtonCheck, id);
         }
 
         private static Dictionary<object, object> FormComboBoxSetIndexHeader(Guid id, int index)

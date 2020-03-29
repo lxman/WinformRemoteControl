@@ -44,6 +44,9 @@ namespace WinformRemoteControl
                 case TabControl tc:
                     Controls.Add(new TabControlWrapper(tc));
                     break;
+                case RadioButton rb:
+                    Controls.Add(new RadioButtonWrapper(rb));
+                    break;
             }
         }
 
@@ -140,6 +143,11 @@ namespace WinformRemoteControl
                     if (!(Controls.FirstOrDefault(c => c.Identifier == Guid.Parse(meta["Guid"].ToString())) is
                         TabControlWrapper tc)) return;
                     tc.SelectTab(meta["Text"].ToString());
+                    break;
+                case ControlCommand.RadioButtonCheck:
+                    if (!(Controls.FirstOrDefault(c => c.Identifier == Guid.Parse(meta["Guid"].ToString())) is
+                        RadioButtonWrapper rbw)) return;
+                    rbw.RadioButtonCheck();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(cc), cc, null);
