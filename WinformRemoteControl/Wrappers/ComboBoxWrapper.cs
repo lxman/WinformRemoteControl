@@ -12,8 +12,8 @@ namespace WinformRemoteControl.Wrappers
         public string Name { get; }
         
         public Control Control { get; private set; }
-        
-        public ComboBox ComboBox { get; private set; }
+
+        private ComboBox ComboBox { get; set; }
 
         public ComboBoxWrapper(ComboBox cb)
         {

@@ -11,8 +11,8 @@ namespace WinformRemoteControl.Wrappers
         public string Name { get; }
         
         public Control Control { get; private set; }
-        
-        public TabControl TabControl { get; private set; }
+
+        private TabControl TabControl { get; set; }
 
         public TabControlWrapper(TabControl tc)
         {

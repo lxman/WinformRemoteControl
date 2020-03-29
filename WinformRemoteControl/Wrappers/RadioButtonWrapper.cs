@@ -10,8 +10,8 @@ namespace WinformRemoteControl.Wrappers
         public string Name { get; }
         
         public Control Control { get; private set; }
-        
-        public RadioButton RadioButton { get; private set; }
+
+        private RadioButton RadioButton { get; set; }
 
         public RadioButtonWrapper(RadioButton rb)
         {

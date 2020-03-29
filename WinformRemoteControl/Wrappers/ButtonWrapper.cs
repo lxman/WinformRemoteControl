@@ -10,8 +10,8 @@ namespace WinformRemoteControl.Wrappers
         public string Name { get; }
 
         public Control Control { get; private set; }
-        
-        public Button Button { get; private set; }
+
+        private Button Button { get; set; }
 
         public ButtonWrapper(Button b)
         {

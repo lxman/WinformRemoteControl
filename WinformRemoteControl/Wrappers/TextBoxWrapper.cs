@@ -10,8 +10,8 @@ namespace WinformRemoteControl.Wrappers
         public string Name { get; }
         
         public Control Control { get; private set; }
-        
-        public TextBox TextBox { get; private set; }
+
+        private TextBox TextBox { get; set; }
 
         public TextBoxWrapper(TextBox tb)
         {

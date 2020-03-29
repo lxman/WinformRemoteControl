@@ -11,7 +11,7 @@ namespace WinformRemoteControl.Wrappers
         
         public Control Control { get; private set; }
 
-        public Label Label { get; private set; }
+        private Label Label { get; set; }
 
         public LabelWrapper(Label l)
         {
