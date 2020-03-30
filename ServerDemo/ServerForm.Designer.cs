@@ -29,6 +29,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Child 1");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Child 2");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Child 3");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Root 1",
+                new System.Windows.Forms.TreeNode[] {treeNode1, treeNode2, treeNode3});
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -44,6 +49,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabControl1.SuspendLayout();
             this.First.SuspendLayout();
             this.Second.SuspendLayout();
@@ -202,11 +208,28 @@
             this.radioButton1.Text = "Choice1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(944, 23);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "childNode1";
+            treeNode1.Text = "Child 1";
+            treeNode2.Name = "childNode2";
+            treeNode2.Text = "Child 2";
+            treeNode3.Name = "childNode3";
+            treeNode3.Text = "Child 3";
+            treeNode4.Name = "rootNode1";
+            treeNode4.Text = "Root 1";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {treeNode4});
+            this.treeView1.Size = new System.Drawing.Size(535, 476);
+            this.treeView1.TabIndex = 7;
+            // 
             // ServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 519);
+            this.ClientSize = new System.Drawing.Size(1494, 519);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.comboBox2);
@@ -246,5 +269,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }

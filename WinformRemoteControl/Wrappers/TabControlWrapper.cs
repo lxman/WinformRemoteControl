@@ -21,7 +21,7 @@ namespace WinformRemoteControl.Wrappers
             TabControl = tc;
         }
 
-        public void SelectTab(string name)
+        public void SelectTabByText(string name)
         {
             if (TabControl.InvokeRequired)
             {

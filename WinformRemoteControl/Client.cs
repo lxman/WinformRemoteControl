@@ -51,6 +51,11 @@ namespace WinformRemoteControl
             Send(FormRadioButtonCheckHeader(GetGuidFromName(name)));
         }
 
+        public void TreeViewSelectNodeByText(string name, string text)
+        {
+            Send(FormTreeViewSelectNodeByTextHeader(GetGuidFromName(name), text));
+        }
+
         public void ComboBoxSetIndex(string name, int index)
         {
             Send(FormComboBoxSetIndexHeader(GetGuidFromName(name), index));
@@ -126,6 +131,14 @@ namespace WinformRemoteControl
                 ["MessageType"] = MessageType.Server,
                 ["ServerCommand"] = ServerCommand.GetControls
             };
+        }
+
+        public static Dictionary<object, object> FormTreeViewSelectNodeByTextHeader(Guid id, string text)
+        {
+            Dictionary<object, object> header =
+                FormBaseControlCommandHeader(ControlCommand.TreeViewSelectNodeByText, id);
+            header.Add("Text", text);
+            return header;
         }
 
         private static Dictionary<object, object> FormButtonClickHeader(Guid id)

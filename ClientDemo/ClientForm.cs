@@ -31,14 +31,21 @@ namespace ClientDemo
         private void button2_Click(object sender, EventArgs e)
         {
             RemoteControlClient.Start();
+            EnableControls();
+        }
+
+        private void EnableControls()
+        {
             button1.Enabled = RemoteControlClient.Connected;
             button3.Enabled = RemoteControlClient.Connected;
             button4.Enabled = RemoteControlClient.Connected;
             button5.Enabled = RemoteControlClient.Connected;
             button6.Enabled = RemoteControlClient.Connected;
+            button7.Enabled = RemoteControlClient.Connected;
             textBox1.Enabled = RemoteControlClient.Connected;
             textBox2.Enabled = RemoteControlClient.Connected;
             textBox3.Enabled = RemoteControlClient.Connected;
+            textBox4.Enabled = RemoteControlClient.Connected;
             comboBox1.Enabled = RemoteControlClient.Connected;
             comboBox2.Enabled = RemoteControlClient.Connected;
             comboBox3.Enabled = RemoteControlClient.Connected;
@@ -104,6 +111,12 @@ namespace ClientDemo
         {
             if (IsComboSetup) RemoteControlClient.RadioButtonCheck($"radioButton{comboBox3.SelectedIndex + 1}");
             else IsComboSetup = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox4.Text)) return;
+            RemoteControlClient.TreeViewSelectNodeByText("treeView1", textBox4.Text);
         }
     }
 }

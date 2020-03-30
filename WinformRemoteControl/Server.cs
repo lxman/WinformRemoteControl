@@ -47,6 +47,9 @@ namespace WinformRemoteControl
                 case RadioButton rb:
                     Controls.Add(new RadioButtonWrapper(rb));
                     break;
+                case TreeView tv:
+                    Controls.Add(new TreeViewWrapper(tv));
+                    break;
             }
         }
 
@@ -141,13 +144,17 @@ namespace WinformRemoteControl
                     break;
                 case ControlCommand.TabControlSelectTab:
                     if (!(Controls.FirstOrDefault(c => c.Identifier == Guid.Parse(meta["Guid"].ToString())) is
-                        TabControlWrapper tc)) return;
-                    tc.SelectTab(meta["Text"].ToString());
+                        TabControlWrapper tcw)) return;
+                    tcw.SelectTabByText(meta["Text"].ToString());
                     break;
                 case ControlCommand.RadioButtonCheck:
                     if (!(Controls.FirstOrDefault(c => c.Identifier == Guid.Parse(meta["Guid"].ToString())) is
                         RadioButtonWrapper rbw)) return;
                     rbw.RadioButtonCheck();
+                    break;
+                case ControlCommand.TreeViewSelectNodeByText:
+                    if (!(Controls.FirstOrDefault(c => c.Identifier == Guid.Parse(meta["Guid"].ToString())) is TreeViewWrapper tvw)) return;
+                    tvw.NodeSelectByText(meta["Text"].ToString());
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(cc), cc, null);

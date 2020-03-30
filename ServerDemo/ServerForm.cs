@@ -30,6 +30,7 @@ namespace ServerDemo
             RemoteControlServer.AddControl(radioButton2);
             RemoteControlServer.AddControl(radioButton3);
             RemoteControlServer.AddControl(radioButton4);
+            RemoteControlServer.AddControl(treeView1);
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -8,6 +8,7 @@
         ComboBoxGetElements,
         ComboBoxSetIndex,
         TabControlSelectTab,
-        RadioButtonCheck
+        RadioButtonCheck,
+        TreeViewSelectNodeByText
     }
 }

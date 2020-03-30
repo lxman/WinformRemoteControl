@@ -63,6 +63,8 @@
         <Compile Include="Wrappers\RadioButtonWrapper.cs" />
         <Compile Include="Wrappers\TabControlWrapper.cs" />
         <Compile Include="Wrappers\TextBoxWrapper.cs" />
+        <Compile Include="Wrappers\TreeViewExtensions.cs" />
+        <Compile Include="Wrappers\TreeViewWrapper.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
