@@ -8,7 +8,7 @@ using WatsonTcp;
 
 namespace WinformRemoteControl
 {
-    public class Client : WatsonTcpClient
+    public class RCClient : WatsonTcpClient
     {
         public event EventHandler<string> Notification;
         public event EventHandler<List<(int, string)>> ComboBoxElementListReceived;
@@ -16,12 +16,12 @@ namespace WinformRemoteControl
         private Dictionary<string, Guid> ServerControls;
         private readonly Dictionary<Guid, List<(int, string)>> ComboBoxElementLists = new Dictionary<Guid, List<(int, string)>>();
         
-        public Client(string addr, int port) : base(addr, port)
+        public RCClient(string addr, int port) : base(addr, port)
         {
             Initialize();
         }
         
-        public Client(string addr, int port, string pfxCertFile, string pfxCertPassword) : base(addr, port, pfxCertFile, pfxCertPassword)
+        public RCClient(string addr, int port, string pfxCertFile, string pfxCertPassword) : base(addr, port, pfxCertFile, pfxCertPassword)
         {
             Initialize();
         }
@@ -116,7 +116,7 @@ namespace WinformRemoteControl
 
         private void OnServerDisconnected(object sender, EventArgs e)
         {
-            MessageBox.Show("Server disconnected.");
+            MessageBox.Show("RCServer disconnected.");
         }
 
         private void OnServerConnected(object sender, EventArgs e)

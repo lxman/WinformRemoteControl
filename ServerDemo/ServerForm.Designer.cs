@@ -127,7 +127,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 15);
+            this.label2.Size = new System.Drawing.Size(112, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "This is the first page";
             // 
@@ -147,7 +147,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 15);
+            this.label3.Size = new System.Drawing.Size(130, 15);
             this.label3.TabIndex = 1;
             this.label3.Text = "This is the second page";
             // 

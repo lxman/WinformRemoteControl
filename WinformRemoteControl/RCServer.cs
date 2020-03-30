@@ -8,17 +8,17 @@ using WinformRemoteControl.Wrappers;
 
 namespace WinformRemoteControl
 {
-    public class Server : WatsonTcpServer
+    public class RCServer : WatsonTcpServer
     {
         private string IpPort = string.Empty;
         private readonly List<IControlWrapper> Controls = new List<IControlWrapper>();
 
-        public Server(string addr, int port) : base(addr, port)
+        public RCServer(string addr, int port) : base(addr, port)
         {
             Initialize();
         }
         
-        public Server(string addr, int port, string pfxCertFile = "", string pfxCertPassword = "") : base(addr, port, pfxCertFile, pfxCertPassword)
+        public RCServer(string addr, int port, string pfxCertFile = "", string pfxCertPassword = "") : base(addr, port, pfxCertFile, pfxCertPassword)
         {
             Initialize();
         }
