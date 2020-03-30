@@ -6,7 +6,7 @@ namespace WinformRemoteControl.Wrappers
 {
     public class TreeViewWrapper : IControlWrapper
     {
-        public Guid Identifier { get; }
+        public Guid Identifier { get; } = Guid.NewGuid();
         
         public string Name { get; }
         
